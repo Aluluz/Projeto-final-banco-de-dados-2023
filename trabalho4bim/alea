@@ -1,0 +1,69 @@
+/*create table pizzaria(
+	endereço varchar(40),
+	nome varchar(20),
+    email varchar(20),
+    idPizzaria integer,
+    primary key(idPizzaria)
+);
+
+
+
+create table pizza(
+	idpizza integer,
+    primary key(idpizza),
+	sabor varchar(20),
+  	idpizzaria integer,
+    foreign key(idPizzaria) references pizzaria(idPizzaria)
+
+);
+
+create table entregador(
+	nome varchar(30),
+    email varchar(20),
+    idade integer,
+    endereço varchar(40),
+    idEntregador integer,
+    primary key(idEntregador),
+  	idPizzaria INTEGER,
+    foreign key(idPizzaria) references pizzaria(idPizzaria) 
+
+);
+
+create table cliente(
+	nome varchar(30),
+    email varchar(20),
+    idade integer,
+    endereço varchar(40),
+    CPF integer,
+    primary key(CPF),
+  	idPizzaria integer,
+    foreign key(idPizzaria) references pizzaria(idPizzaria) 
+
+);
+
+create table fornecedor(
+	nome varchar(30),
+    email varchar(20),
+    idade integer,
+    endereço varchar(40),
+    idFornecedor integer,
+    primary key(idFornecedor),
+  	idPizzaria integer,
+    foreign key(idPizzaria) references pizzaria(idPizzaria) 
+
+);
+
+create TABLE pedido(
+
+  	valor float,
+  	peso FLOAT,
+  	idEntregador integer,
+  	notaF varchar(50),
+  	CPF_Cliente integer,
+  	dataCompra DATE,
+  	idPizzas INTEGER,
+  	primary key(notaF),
+  	FOREIGN KEY (identregador) REFERENCES entregador(identregador),
+  	FOREIGN KEY (CPF_Cliente) REFERENCES cliente(cpf),
+  	FOREIGN KEY (idPizzas) REFERENCES pizza(idpizza)
+);*/
